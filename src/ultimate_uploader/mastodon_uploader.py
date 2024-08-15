@@ -25,8 +25,6 @@ def post_to_mastodon(text):
     if not exists('mastodon.secret'):
         register_app()
 
-        
-
     mastodon = Mastodon(access_token = 'mastodon.secret')
     mastodon.toot(text)
 
