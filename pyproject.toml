@@ -12,4 +12,4 @@ license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 
 [project.scripts]
-post-to-all = "ultimate_uploader.__main__:post_to_all"
+post-to-all = "ultimate_uploader.__main__:main"

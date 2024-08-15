@@ -5,5 +5,8 @@ def post_to_all(text):
     post_to_twitter(text)
     post_to_mastodon(text)
 
-if __name__ == "__main__":
+def main():
     post_to_all("Test")
+
+if __name__ == "__main__":
+    main()
