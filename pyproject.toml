@@ -12,7 +12,8 @@ license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 
 dependencies = [
-  "Mastodon.py==1.8.1"
+  "Mastodon.py==1.8.1",
+  "pywhatkit==5.4"
 ]
 
 [project.scripts]
