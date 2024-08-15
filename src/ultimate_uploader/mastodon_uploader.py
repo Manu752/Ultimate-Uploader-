@@ -14,16 +14,18 @@ def register_app():
         to_file = 'mastodon.secret'
     )
 
+    mastodon = Mastodon(client_id = 'mastodon.secret')
+    mastodon.log_in(
+        config['email'],
+        config['password'],
+        to_file = 'mastodon.secret'
+    )
+
 def post_to_mastodon(text):
     if not exists('mastodon.secret'):
         register_app()
 
-        mastodon = Mastodon(client_id = 'mastodon.secret')
-        mastodon.log_in(
-            config['email'],
-            config['password'],
-            to_file = 'mastodon.secret'
-        )
+        
 
     mastodon = Mastodon(access_token = 'mastodon.secret')
     mastodon.toot(text)
