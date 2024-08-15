@@ -11,21 +11,21 @@ def register_app():
     Mastodon.create_app(
         'Ultimate-Uploader',
         api_base_url = 'https://ruhr.social',
-        to_file = 'ultimate_uploader_clientcred.secret'
+        to_file = 'mastodon.secret'
     )
 
 def post_to_mastodon(text):
-    if not exists('ultimate_uploader_clientcred.secret'):
+    if not exists('mastodon.secret'):
         register_app()
 
-    mastodon = Mastodon(client_id = 'ultimate_uploader_clientcred.secret')
-    mastodon.log_in(
-        config['email'],
-        config['password'],
-        to_file = 'ultimate_uploader_clientcred.secret'
-    )
+        mastodon = Mastodon(client_id = 'mastodon.secret')
+        mastodon.log_in(
+            config['email'],
+            config['password'],
+            to_file = 'mastodon.secret'
+        )
 
-    mastodon = Mastodon(access_token = 'ultimate_uploader_clientcred.secret')
+    mastodon = Mastodon(access_token = 'mastodon.secret')
     mastodon.toot(text)
 
 if __name__ == "__main__":

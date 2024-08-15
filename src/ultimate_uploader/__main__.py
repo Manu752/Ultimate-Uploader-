@@ -1,5 +1,5 @@
 from .twitter import post_to_twitter
-from .mastodon import post_to_mastodon
+from .mastodon_uploader import post_to_mastodon
 
 def post_to_all(text):
     post_to_twitter(text)
