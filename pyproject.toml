@@ -11,5 +11,9 @@ description = ""
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 
+dependencies = [
+  "Mastodon.py==1.8.1"
+]
+
 [project.scripts]
 post-to-all = "ultimate_uploader.__main__:main"
